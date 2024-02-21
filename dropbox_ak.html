@@ -1,1 +1,29 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>File Upload and Download</title>
+</head>
+<body>
+    <h1>File Upload and Download</h1>
 
+    <!-- File Upload Form -->
+    <form action="upload.php" method="post" enctype="multipart/form-data">
+        <label for="file">Select a file to upload:</label><br>
+        <input type="file" name="file" id="file"><br>
+        <label for="comments">Comments:</label><br>
+        <textarea name="comments" id="comments" rows="4" cols="50"></textarea><br>
+        <input type="submit" value="Upload File" name="submit">
+    </form>
+
+    <hr>
+
+    <!-- File Download Links -->
+    <h2>Available Files for Download</h2>
+    <ul>
+        <li><a href="uploads/example_file.txt" download>Example File</a> - Comment: This is an example file</li>
+        <!-- Add more files dynamically or fetch from server -->
+    </ul>
+</body>
+</html>
